@@ -66,6 +66,13 @@ The goal of this book is to prove to them that it is possible to think about it 
 
     5.2. Call TensorFlow from MATLAB
 
+    5.3. Call a TensorFlow training loop from MATLAB
+
+6. [Call MATLAB from Python](6_Call_MATLAB_from_Python.md)
+    
+    6.1. Getting started with the MATLAB Engine API for Python
+
+    6.2. Facilitate AI development by using MATLAB Apps
 
 
 MATLAB&reg; is a registered trademarks of The MathWorks, Inc.
