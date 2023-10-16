@@ -12,6 +12,16 @@ Those steps can be integrated in a typical [AI workflow](https://www.mathworks.c
 
 The Iris flower [dataset](https://en.wikipedia.org/wiki/Iris_flower_data_set) is a multivariate data set introduced by the British statistician and biologist Ronald Fisher. This data set consists of 3 different types of irises’ (Setosa, Versicolour, and Virginica) petal and sepal length, stored in a 150x4 numpy.ndarray. The rows being the samples and the columns being: Sepal Length, Sepal Width, Petal Length and Petal Width.
 
+Setup on MATLAB Online to retrieve and install the necessary Python packages:
+```matlab
+% Check if we are running on MATLAB Online
+if ~isDesktop
+    setuppip
+    pkg = "scikit-learn pandas pyarrow";
+    pipinstall(pkg)
+    pipshow(pkg)
+end
+```
 
 You can also find this dataset in MATLAB, as it is shipped with a list of [Sample Data Sets](https://www.mathworks.com/help/stats/sample-data-sets.html) as part of the Stats \& Machine Learning Toolbox:
 

@@ -20,7 +20,7 @@ The goal of this book is to prove to them that it is possible to think about it 
 
 2. [End-to-end project with MATLAB & Python](2_End-to-end_project_with_MATLAB_and_Python.md)
 
-    2.1. Call Python from MATLAB
+    2.1. Call Python from MATLAB [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=yanndebray/matlab-with-python-book&file=code/Chap_2_End_to_end_project_with_MATLAB_and_Python.mlx)
 
     2.2. Call MATLAB from Python
 
@@ -62,9 +62,9 @@ The goal of this book is to prove to them that it is possible to think about it 
 
 5. [Call Python AI libraries from MATLAB](5_Call_Python_AI_libraries_from_MATLAB.md)
 
-    5.1. Call Scikit-learn from MATLAB
+    5.1. Call Scikit-learn from MATLAB [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=yanndebray/matlab-with-python-book&file=code/Chap_5_1_Call_Scikit-learn_from_MATLAB.mlx)
 
-    5.2. Call TensorFlow from MATLAB
+    5.2. Call TensorFlow from MATLAB [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=yanndebray/matlab-with-python-book&file=code/Chap_5_2_Call_TensorFlow_from_MATLAB.mlx)
 
     5.3. Call a TensorFlow training loop from MATLAB
 
@@ -74,6 +74,11 @@ The goal of this book is to prove to them that it is possible to think about it 
 
     6.2. Facilitate AI development by using MATLAB Apps
 
+
+7. [Resources](7_Resources.md)
+
+    7.1 Getting Python packages on MATLAB Online
+    
 
 MATLAB&reg; is a registered trademarks of The MathWorks, Inc.
 
