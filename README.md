@@ -4,7 +4,9 @@ Engineers and scientists that I meet every day think about MATLAB & Python as MA
 
 The goal of this book is to prove to them that it is possible to think about it as MATLAB with Python.
 
-<img align="right" src="./media/image1.png" height="400px"/>
+Find the Book on [Amazon](https://www.amazon.com/MATLAB-Python-Yann-Debray/dp/B0CNHT6GJH)
+
+<img align="right" src="./media/python_drawing_on_white_background_with_blue_and_orange_colors.png" height="400px"/>
 
 ### Table of content
 
@@ -66,7 +68,7 @@ The goal of this book is to prove to them that it is possible to think about it 
 
     5.2. Call TensorFlow from MATLAB [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=yanndebray/matlab-with-python-book&file=code/Chap_5_2_Call_TensorFlow_from_MATLAB.mlx)
 
-    5.3. Call a TensorFlow training loop from MATLAB
+    5.3. Import TensorFlow model into MATLAB
 
 6. [Call MATLAB from Python](6_Call_MATLAB_from_Python.md)
     
