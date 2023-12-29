@@ -47,7 +47,134 @@ If Python does not find automatically the running session, you can enter the eng
 
 ## 6.2.	Facilitate AI development by using MATLAB Apps
 
-### 6.2.1.	Regression and Classification Learner Apps
+### 6.2.1. Data Cleaner App
+
+The first step in an AI pipeline is often to clean the data. This process requires some level of interactivity for the data analyst to understand which variables she is manipulating. Once the input format of the data is fixed, this process can be automated to scale it to the whole dataset.
+Let’s take an example with the weather data from chapter 2. In this first example, we will start MATLAB in `-nodesktop` mode (which is the default mode for the engine). In the next two sections, we will use the `-desktop` mode to show how to use the MATLAB desktop to interact with the data, but also connect to an already running MATLAB session.
+Set up the environment
+```
+!git clone https://github.com/hgorr/weather-matlab-python
+```
+```python
+import matlab.engine
+m = matlab.engine.start_matlab()
+m.cd('weather-matlab-python') # returns the previous dir location 
+# m.cd('..')
+```
+```text:Output
+'C:\\Users\\ydebray\\Downloads\\python-book-github'
+```
+```python
+m.pwd()
+```
+```text:Output
+'C:\\Users\\ydebray\\Downloads\\python-book-github\\weather-matlab-python'
+```
+```python
+# Make sure that your Python interpreter follows along
+import os
+os.getcwd()
+os.chdir('weather-matlab-python')
+# os.chdir('..')
+```
+**Retrieve Weather Data**
+```python
+import weather
+appid ='b1b15e88fa797225412429c1c50c122a1'
+json_data = weather.get_forecast('Muenchen','DE',appid,api='samples')
+data = weather.parse_forecast_json(json_data)
+data.keys()
+```
+```text:Output
+dict_keys(['current_time', 'temp', 'deg', 'speed', 'humidity', 'pressure'])
+print(len(data['temp']))
+data['temp'] [0:5]
+```
+```text:Output
+36
+[286.67, 285.66, 277.05, 272.78, 273.341]
+```
+```python
+t = matlab.double(data['temp'])
+t
+```
+```text:Output
+matlab.double([[286.67,285.66,277.05,272.78,273.341,275.568,276.478,276.67,278.253,276.455,275.639,275.459,275.035,274.965,274.562,275.648,277.927,278.367,273.797,271.239,269.553,268.198,267.295,272.956,277.422,277.984,272.459,269.473,268.793,268.106,267.655,273.75,279.302,279.343,274.443,272.424]])
+```
+**Format into a Timetable**
+```python
+# Transform into a timetable for data cleaning
+m.workspace['data'] = data
+m.eval("TT = timetable(datetime(string(data.current_time))',cell2mat(data.temp)','VariableNames',{'Temp'})",nargout=0)
+m.who()
+```
+```text:Output
+['TT', 'data']
+```
+**Interact manually with the app**
+```python
+m.dataCleaner(nargout=0)
+```
+The app will appear, with a blank canvas, giving you the option to import data. Select the timetable from your workspace.
+
+![](media/image117.png)
+
+![](media/image118.png)
+ 		 
+This will open your data into the app main view:
+
+![](media/image119.png)
+ 
+In the left panel, you can select the variables that you want to visualize and manipulate. 
+
+
+We will select the Time variable, and use the **Retime Timetable** cleaning method:
+
+![](media/image120.png)
+
+This will display options in the right panel, where we will specify the new sampling, Time step: 1 (hour). Once you are happy with the results, click accept (bottom right).
+
+![](media/image121.png)
+ 
+You can see the results of this transformation on your data by changing the tabs in the center panel:
+
+![](media/image122.png)
+ 
+The second transformation we will operate on this is **Smooth Data**. 
+
+![](media/image123.png)
+
+You can select the smoothing method (we will stick with the default moving average) and play around with the smoothing factor.
+
+![](media/image124.png)
+
+**Export the cleaning steps**
+Once you are happy with the way your data looks, you can save your manual operations as a function that you will apply to any new weather data that comes in, to automate the preprocessing.
+
+![](media/image125.png) 
+
+[preprocess.m](code/preprocess.m)
+```matlab
+function TT = preprocess(TT)
+	% Retime timetable
+	TT = retime(TT,"regular","linear","TimeStep",hours(1));
+	% Smooth input data
+	TT = smoothdata(TT,"movmean","SmoothingFactor",0.25);
+end
+```
+You can call this function from Python, and test that it works.
+```python
+TT = m.workspace['TT']
+TT2 = m.preprocess(TT)
+m.parquetwrite("data.parquet",TT2,nargout=0)
+import pandas as pd
+pd.read_parquet('data.parquet').plot(y='Temp')
+```
+
+![](media/image126.png)
+
+
+### 6.2.2. Regression and Classification Learner Apps
 We will take the Boston housing example that is part of the Scikit-Learn sample datasets to call MATLAB from Python. 
 Open a Jupyter notebook and connect to a running MATLAB session from Python:
 ```python
@@ -144,7 +271,7 @@ m.feval(predFcn,X_test)
 
 You can iterate and test another model to see if the predictions are closer to the test target.
 
-### 6.2.2.	Image Labeler App
+### 6.2.3.	Image Labeler App
 Data preparation is key in developing Machine Learning and Deep Learning applications. No matter how much effort you put into your ML model, it will likely perform poorly if you didn’t spend the right time in preparing your data to be consumed by your model.
 In this example, we start with a set of images to label for a Deep Learning application.
 ```python

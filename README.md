@@ -1,10 +1,16 @@
 # MATLAB with Python Book
 
+[![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=yanndebray/matlab-with-python-book&file=code/README.mlx)
+[![View MATLAB with Python Book on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/156467-matlab-with-python-book)
+
 Engineers and scientists that I meet every day think about MATLAB & Python as MATLAB vs Python. 
 
 The goal of this book is to prove to them that it is possible to think about it as MATLAB with Python.
 
 Find the Book on [Amazon](https://www.amazon.com/MATLAB-Python-Yann-Debray/dp/B0CNHT6GJH)
+
+The content is open-source on GitHub 
+[yanndebray/matlab-with-python-book](https://github.com/yanndebray/matlab-with-python-book/)
 
 <img align="right" src="./media/python_drawing_on_white_background_with_blue_and_orange_colors.png" height="400px"/>
 
@@ -22,7 +28,7 @@ Find the Book on [Amazon](https://www.amazon.com/MATLAB-Python-Yann-Debray/dp/B0
 
 2. [End-to-end project with MATLAB & Python](2_End-to-end_project_with_MATLAB_and_Python.md)
 
-    2.1. Call Python from MATLAB [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=yanndebray/matlab-with-python-book&file=code/Chap_2_End_to_end_project_with_MATLAB_and_Python.mlx)
+    2.1. Call Python from MATLAB 
 
     2.2. Call MATLAB from Python
 
@@ -64,9 +70,9 @@ Find the Book on [Amazon](https://www.amazon.com/MATLAB-Python-Yann-Debray/dp/B0
 
 5. [Call Python AI libraries from MATLAB](5_Call_Python_AI_libraries_from_MATLAB.md)
 
-    5.1. Call Scikit-learn from MATLAB [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=yanndebray/matlab-with-python-book&file=code/Chap_5_1_Call_Scikit-learn_from_MATLAB.mlx)
+    5.1. Call Scikit-learn from MATLAB
 
-    5.2. Call TensorFlow from MATLAB [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=yanndebray/matlab-with-python-book&file=code/Chap_5_2_Call_TensorFlow_from_MATLAB.mlx)
+    5.2. Call TensorFlow from MATLAB
 
     5.3. Import TensorFlow model into MATLAB
 
