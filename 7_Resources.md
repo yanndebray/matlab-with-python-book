@@ -27,3 +27,22 @@ whlname = [filename fileext];
 websave(whlname,urlwhl);
 end
 ```
+
+## 7.2. Generate this book with Quarto and Pandoc
+
+This book is written with different editing tools: Word, Live scripts, , Jupyter Notebook and Markdown. In order to maintain consistency and automate the generation of the different formats, different conversions are applied:
+- live scripts > word 
+- live scripts > markdown
+- live scripts > jupyter notebook
+- jupyter notebook > markdown
+- jupyter notebook > word
+
+I am leveraging an open-source software called [Quarto](https://quarto.org/), developed by Posit (formerly known as the company RStudio). Quarto is built on [Pandoc](https://pandoc.org/) a universal document converter that allows you to write in Markdown, and generate a book in multiple formats, including Word, PDF, HTML, Markdown, and Jupyter Notebooks. 
+
+Quarto is a great tool to write technical books, as it complements Pandoc by supporting code in multiple languages, including MATLAB and Python, with interactive code snippets, that can be executed in VS Code or Jupyter.
+
+Here is one example of a command to generate word documents from the Jupyter notebooks:
+
+```bash
+quarto pandoc notebook.ipynb -s -o README.md
+```

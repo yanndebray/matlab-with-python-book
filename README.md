@@ -82,11 +82,13 @@ The content is open-source on GitHub
 
     6.2. Facilitate AI development by using MATLAB Apps
 
+    6.3. Leverage the work from the MATLAB community
 
 7. [Resources](7_Resources.md)
 
-    7.1 Getting Python packages on MATLAB Online
+    7.1. Getting Python packages on MATLAB Online
     
+    7.2. Generate this book with Quarto and Pandoc
 
 MATLAB&reg; is a registered trademarks of The MathWorks, Inc.
 
