@@ -84,11 +84,21 @@ The content is open-source on GitHub
 
     6.3. Leverage the work from the MATLAB community
 
-7. [Resources](7_Resources.md)
+7. [Simulink with Python](7_Simulink_with_Python.md)
 
-    7.1. Getting Python packages on MATLAB Online
+    7.1. Bring Python code into Simulink as a library for co-execution
+
+    7.2. Integrate TensorFlow and PyTorch models for both simulation and code generation
+
+    7.3. Simulate a Simulink model directly from Python
+
+    7.4. Export a Simulink model as a Python package for deployment
+
+7. [Resources](8_Resources.md)
+
+    8.1. Getting Python packages on MATLAB Online
     
-    7.2. Generate this book with Quarto and Pandoc
+    8.2. Generate this book with Quarto and Pandoc
 
 MATLAB&reg; is a registered trademarks of The MathWorks, Inc.
 
