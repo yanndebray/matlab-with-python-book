@@ -2,7 +2,7 @@
   "build": {
     "dockerfile": "Dockerfile",
     "args": {
-      "MATLAB_PRODUCT_LIST": "MATLAB Simulink Curve_Fitting_Toolbox Deep_Learning_Toolbox Image_Processing_Toolbox Statistics_and_Machine_Learning_Toolbox MATLAB_Compiler MATLAB_Compiler_SDK"
+      "MATLAB_PRODUCT_LIST": "MATLAB Simulink Simulink_Compiler Curve_Fitting_Toolbox Deep_Learning_Toolbox Image_Processing_Toolbox Statistics_and_Machine_Learning_Toolbox MATLAB_Compiler MATLAB_Compiler_SDK"
     }
   },
   // "image": "mcr.microsoft.com/devcontainers/universal:2",
