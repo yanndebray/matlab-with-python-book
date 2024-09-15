@@ -10,12 +10,15 @@ a [version of Python compatible with your MATLAB version](https://www.mathworks.
 For instance, this is the list of versions compatible with the latest
 releases:
 
-| MATLAB Version | Compatible Versions of Python 2 | Compatible Versions of Python 3 |
-|----------------|---------------------------------|---------------------------------|
-| R2023a         | 2.7                             | 3.9, 3.10                       |
-| R2022b         | 2.7                             | 3.8, 3.9, 3.10                  |
-| R2022a         | 2.7                             | 3.8, 3.9                        |
-| R2021b         | 2.7                             | 3.7, 3.8, 3.9                   |
+| MATLAB Version | Compatible Versions of Python 3 |
+|----------------|---------------------------------|
+| R2024b         | 3.10, 3.11, 3.12                |
+| R2024a         | 3.9, 3.10, 3.11                 |
+| R2023b         | 3.9, 3.10, 3.11                 |
+| R2023a         | 3.8, 3.9, 3.10                  |
+| R2022b         | 2.7, 3.8, 3.9, 3.10             |
+| R2022a         | 2.7, 3.8, 3.9                   |
+| R2021b         | 2.7, 3.7, 3.8, 3.9              |
 
 ### 3.1.1. Install Python on Windows
 
