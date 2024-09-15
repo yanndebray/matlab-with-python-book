@@ -85,12 +85,9 @@ If it feels more convenient to paste your Python code snippet into a script, you
 
 ## 4.2. Execute Python code in a MATLAB Live Task
 
-Since MATLAB 2022a, you can develop your own custom live tasks. So, in mid-2021, we started prototyping a Python live task with Lucas Garcia. The truth is: I made a first crappy version, and Lucas turned it into something awesome (Lucas should get all the credits for this). Based on this Minimal Viable Product, we engaged with the development teams, both of the MATLAB editor team, and the Python interface team. We decided it would be best to release this prototype in open-source on GitHub to get early feedbacks, and potentially ship it in the product in future version.
+Since MATLAB 2022a, you can develop your own custom live tasks. So, in mid-2021, we started prototyping a Python live task with Lucas Garcia. The truth is: I made a first crappy version, and Lucas turned it into something awesome (Lucas should get all the credits for this). Based on this Minimal Viable Product, we engaged with the development teams, both the MATLAB editor team, and the Python interface team. We decided it would be best to release this prototype in open-source on GitHub to get early feedback. The code is available on https://github.com/mathworks/MATLAB-Live-Task-for-Python 
 
-The code is available on https://github.com/mathworks
-
-To test it, just clone or download the repo. Execute the set-up script to register the Live Task in your Task gallery. Create a new Live Script, and select Task in the Live
-Editor tab. You should see this icon under MY TASKS:
+As of 24a, you can find this live task directly in the product. To test it, create a new Live Script, and select Task in the Live Editor tab. You should see this icon under EXTERNAL LANGUAGE INTERFACES:
 
 <img src="./media/image41.png" />
 
@@ -98,13 +95,16 @@ If you click on it, it will add the live task to your Live Script where the curs
 
 <img src="./media/image43.png" />
 
-This is what the first version (mine looked like):
+This is what the in-product version of this Python live task looks like:
 
-<img src="./media/image44.png" />
+<img src="./media/image45b.png" />
 
-And this is what Lucas turned it into:
-
-<img src="./media/image45.png" />
+You can try it out by inputting raw python code, that takes a MATLAB input, like:
+```python
+import textwrap as tw
+format = tw.TextWrapper(width=30)
+wrapped = format.wrap(T)
+```
 
 ## 4.3. Basic syntax of calling Python from MATLAB
 
