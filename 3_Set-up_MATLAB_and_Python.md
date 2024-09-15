@@ -312,6 +312,8 @@ Jupyter/IPython Notebook ipynb files.
 As any other Integrated Development Environment, VS Code supports writing scripts and executing them in several languages (Python,
 Javascript, …)
 
+As of early 2024, VSCode also has a [MATLAB extension](https://blogs.mathworks.com/matlab/2024/03/05/matlab-extension-for-visual-studio-code-now-with-code-execution/) that enables you to run MATLAB code in the editor by connecting to a MATLAB session running on your machine.
+
 <img src="./media/image38.png" />
 
 The big difference with the [Eclipse](https://en.wikipedia.org/wiki/Eclipse_(software)) approach to componentization is the
@@ -332,12 +334,12 @@ since 2019b. Before that, use
 If you have multiple Python versions installed, you can specify which
 version to use, either with:
 ```
->> pyenv('Version','3.8')
+>> pyenv('Version','3.10')
 ```
 or
 ```
 >> pyenv('Version','C:\Users\ydebray\AppData\Local\Programs\Python\  
-Python38\python.exe')
+Python310\python.exe')
 ```
 This is also the way to connect to Python virtual environments:
 ```
@@ -370,4 +372,4 @@ python setup.py install
 ```
 
 On Linux, you need to make sure that the default install location of MATLAB by calling `matlabroot` in a MATLAB Command Window. By default, Linux installs MATLAB at:
-`/usr/local/MATLAB/R2023a`
+`/usr/local/MATLAB/R2024b`
