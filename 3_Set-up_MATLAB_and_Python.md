@@ -260,7 +260,7 @@ frontend.
 IPython gave turn to Jupyter, to become language agnostic. Jupyter
 supports execution environments (aka kernels) in several dozen languages
 among which are Julia, R, Haskell, Ruby, and of course Python (via the
-IPython kernel)... and [MATLAB](https://github.com/Calysto/matlab_kernel) (via a kernel maintained by the community and building on the MATLAB Engine for Python).
+IPython kernel)... and [MATLAB](https://blogs.mathworks.com/matlab/2023/01/30/official-mathworks-matlab-kernel-for-jupyter-released/) (via a kernel maintained by MathWorks).
 
 To summarize, Jupyter provides 3 key *components* to the modern
 scientific computing stack:
@@ -302,7 +302,6 @@ MathWorks has released an official kernel for Jupyter in January 2023. In additi
 To find out how to install this on your JupyterHub server:  
 - https://github.com/mathworks/jupyter-matlab-proxy 
 - https://www.mathworks.com/products/reference-architectures/jupyter.html 
-- https://blogs.mathworks.com/matlab/2023/01/30/official-mathworks-matlab-kernel-for-jupyter-released/ 
 
 
 ### 3.6.3. Visual Studio Code
