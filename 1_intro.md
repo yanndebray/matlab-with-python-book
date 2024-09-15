@@ -17,7 +17,7 @@ languages including Python.
 
 MATLAB works with common python distributions. For this book I will be
 using Python 3.10 (downloaded on
-[Python.org](https://www.python.org/downloads/)) and MATLAB 2023a.
+[Python.org](https://www.python.org/downloads/)) and MATLAB 2024b.
 
 ## 1.1. A brief history of scientific computing
 
@@ -43,8 +43,7 @@ software in its early days.
 
 At that time MATLAB was not yet a programming language. It had no file
 extension (m-scripts), no toolboxes. The only available datatype was
-matrices. The graphic capabilities were asterisks drawn on the screen
-(not Astérix The Gaul).
+matrices. The graphic capabilities were asterisks drawn on the screen.
 
 <img src="./media/image3.gif" />
 

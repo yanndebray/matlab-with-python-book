@@ -1247,7 +1247,55 @@ ans = 3x3
 ## 4.7.4. Dataframes
 
 
-One common question on data transfer, is how to exchange data between MATLAB tables and Pandas Dataframes. The recommended solution for that is to rely on [Parquet files](https://www.mathworks.com/help/matlab/parquet-files.html). Parquet is a columnar storage format that enables to store \& transfer tabular data between languages. It is available to any project in the Hadoop big data ecosystem, regardless of the choice of data processing framework, data model or programming language (more on [Parquet](https://parquet.apache.org/)).
+
+One common question on data transfer, is how to exchange data between MATLAB tables and Pandas Dataframes. Since 24a, Pandas Dataframes can be casted into MATLAB tables:
+
+```matlab
+d.a=[1,2,3];
+d.b=[4,5,6];
+df = py.pandas.DataFrame(d)
+```
+
+```text:Output
+df = 
+  Python DataFrame with properties:
+
+          T: [1x1 py.pandas.core.frame.DataFrame]
+         at: [1x1 py.pandas.core.indexing._AtIndexer]
+      attrs: [1x1 py.dict]
+       axes: [1x2 py.list]
+    columns: [1x1 py.pandas.core.indexes.base.Index]
+     dtypes: [1x1 py.pandas.core.series.Series]
+      empty: 0
+      flags: [1x1 py.pandas.core.flags.Flags]
+        iat: [1x1 py.pandas.core.indexing._iAtIndexer]
+       iloc: [1x1 py.pandas.core.indexing._iLocIndexer]
+      index: [1x1 py.pandas.core.indexes.range.RangeIndex]
+        loc: [1x1 py.pandas.core.indexing._LocIndexer]
+       ndim: [1x1 py.int]
+      shape: [1x2 py.tuple]
+       size: [1x1 py.numpy.int32]
+      style: [1x1 py.pandas.io.formats.style.Styler]
+     values: [1x1 py.numpy.ndarray]
+
+         a    b
+    0  1.0  4.0
+    1  2.0  5.0
+    2  3.0  6.0
+
+```
+
+```matlab
+T = table(df)
+```
+| |a|b|
+|:--:|:--:|:--:|
+|1|1|4|
+|2|2|5|
+|3|3|6|
+
+
+Before 24a, the recommended solution was to rely on [Parquet files](https://www.mathworks.com/help/matlab/parquet-files.html). Parquet is a columnar storage format that enables to store \& transfer tabular data between languages. It is available to any project in the Hadoop big data ecosystem, regardless of the choice of data processing framework, data model or programming language (more on [Parquet](https://parquet.apache.org/)).
 
 
 
