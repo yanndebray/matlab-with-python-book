@@ -442,7 +442,7 @@ functions, like so:
 ```python
 >>> import AirQual
 >>> aq = AirQual.initialize()
->>> result = aq.predictAirQual()
+>>> result = aq.predictAirQual(data)
 ```
 When we’re finished, wrap things up by terminating the process:
 ```python
