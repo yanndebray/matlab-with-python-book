@@ -1,34 +1,24 @@
 {
-  "build": {
-    "dockerfile": "Dockerfile",
-    "args": {
-      "MATLAB_PRODUCT_LIST": "MATLAB Simulink Simulink_Compiler Curve_Fitting_Toolbox Deep_Learning_Toolbox Image_Processing_Toolbox Statistics_and_Machine_Learning_Toolbox MATLAB_Compiler MATLAB_Compiler_SDK"
-    }
-  },
-  // "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "name": "MATLAB with Python",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
   "hostRequirements": {
-    "cpus": 4
+      "cpus": 4
   },
-  "forwardPorts": [
-    8888
-  ],
-  "waitFor": "onCreateCommand",
-  // "updateContentCommand": "python3 -m pip install -r requirements.txt",
-  // "postCreateCommand": "apt-get install -y git",
-  "updateContentCommand": "sed -i 's/.*c.NotebookApp.allow_origin_pat.*/import os; c.NotebookApp.allow_origin_pat = \".*\" + os.getenv(\"CODESPACE_NAME\") + \".*\"/g' ~/.jupyter/jupyter_notebook_config.py",
-  // "postStartCommand": "jupyter lab &",
-  "customizations": {
-    "codespaces": {
-      "openFiles": []
-    },
-    "vscode": {
-      "extensions": [
-        "ms-toolsai.jupyter",
-        "MathWorks.language-matlab",
-        "ms-python.python",
-        "github.vscode-github-actions",
-        "github.copilot"
-      ]
-    }
+  "features": {
+      "ghcr.io/mathworks/devcontainer-features/matlab": {
+          "release": "r2024b",
+          "products": "MATLAB Simulink Simulink_Compiler Curve_Fitting_Toolbox Deep_Learning_Toolbox Image_Processing_Toolbox Statistics_and_Machine_Learning_Toolbox MATLAB_Compiler MATLAB_Compiler_SDK",
+          "installJupyterMatlabProxy": true,
+          "installMatlabEngineForPython": true
+      },
+      "ghcr.io/devcontainers/features/python": {
+          "version": "os-provided",
+          "installJupyterlab": true,
+          "configureJupyterlabAllowOrigin": "*"
+      }
+  },
+  "containerEnv": {
+      "MATLAB_USERWORKDIR": "${containerWorkspaceFolder}",
+      "MATLAB_USE_USERWORK": "1"
   }
 }
